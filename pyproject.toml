@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "hr-tech-ai"
+version = "0.1.0"
+description = "HR Tech AI Platform for Candidate Search and Analysis"
+authors = ["Admin <admin@example.com>"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.109.0"
+uvicorn = "^0.27.0"
+streamlit = "^1.31.0"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+pydantic = "^2.6.0"
+pinecone-client = "^3.1.0"
+openai = "^1.12.0"
+langchain = "^0.1.0"
+langchain-community = "^0.0.10"
+langchain-openai = "^0.0.5"
+tiktoken = "^0.6.0"
+pandas = "^2.2.0"
+python-multipart = "^0.0.9"
+structlog = "^24.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+black = "^24.1.0"
+ruff = "^0.2.0"
+mypy = "^1.8.0"
+httpx = "^0.26.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+strict_optional = true
